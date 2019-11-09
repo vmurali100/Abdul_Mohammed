@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      //{ } is A empty Object
+
+      //   Creating An Object in Literal way
+      var person = {};
+      var c = "city";
+      var person = { fname: "Murali", lname: "Krishna" };
+      person.email = "murali@gmail.com";
+      person["city"] = "Bangalore";
+      //   "fname:Murali" is A property Of Object
+      //   fname is Called Property Name or Key of the Object
+      //   "Murali" is Property value or Value
+      //   Each property has to be separated by ','
+      //   console.log(person["email"]);
+      //   document.getElementById("demo").innerHTML =
+      //     person.fname +
+      //     " <br>" +
+      //     person.lname +
+      //     "<br>" +
+      //     person.email +
+      //     "<br>" +
+      //     person.city;
+
+      //   for in loop
+
+      for (a in person) {
+        // console.log(a);
+        console.log(person[a]);
+      }
+    </script>
+  </body>
+</html>
