@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="fname">First Name : </label>
+      <input type="text" id="fname" /><br />
+      <label for="lname">Last Name : </label>
+      <input type="text" id="lname" />
+      <button onclick="getValues()" type="button">Get Values</button>
+      <button onclick="setValues()" type="button">Set Values</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </thead>
+      <tbody id="myTable"></tbody>
+    </table>
+    <script>
+      function getValues() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        console.log(fname);
+        console.log(lname);
+        createTableRows(fname, lname);
+      }
+
+      function setValues() {
+        var fname = "Abdul ";
+        var lname = "Mohammed";
+        document.getElementById("fname").value = fname;
+        document.getElementById("lname").value = lname;
+      }
+
+      function createTableRows(fname, lname) {
+        var tableRow = document.createElement("tr");
+        var td1 = document.createElement("td");
+        td1.innerHTML = fname;
+
+        var td2 = document.createElement("td");
+        td2.innerHTML = lname;
+        tableRow.appendChild(td1);
+        tableRow.appendChild(td2);
+
+        document.getElementById("myTable").appendChild(tableRow);
+      }
+    </script>
+  </body>
+</html>

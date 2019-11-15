@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- When User Clicks On the Button , We are invoking a function called sayHello -->
+    <button onclick="sayHello()">Click</button>
+    <input type="text" onfocus="sayHello()" onblur="saybye()" />
+    <select name="" id="" onchange="sayHello()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <br />
+    <input type="radio" name="gender" id="" onchange="sayHello()" />Male
+    <input type="radio" name="gender" id="" onchange="sayHello()" />Female
+    <hr />
+    <input type="checkbox" name="" id="" onchange="sayHello()" />HTML
+    <input type="checkbox" name="" id="" onchange="sayHello()" />CSS
+    <input type="checkbox" name="" id="" onchange="sayHello()" />JS
+    <input type="checkbox" name="" id="" onchange="sayHello()" />Angular
+
+    <script>
+      //   function sayHello() {
+      //     console.log("Hi you Clicked on ?");
+      //   }
+
+      //   var sayHello = function() {
+      //     console.log("you Clcked me Now ?");
+      //   };
+
+      var sayHello = function hello() {
+        console.log("Welcome to Javascript");
+      };
+
+      var saybye = function() {
+        console.log("Bye Bye for now");
+      };
+    </script>
+  </body>
+</html>
