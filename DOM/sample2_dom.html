@@ -12,11 +12,13 @@
       <button onclick="getValues()" type="button">Get Values</button>
       <button onclick="setValues()" type="button">Set Values</button>
     </form>
-
+    <br /><br />
     <table border="1">
       <thead>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </thead>
       <tbody id="myTable"></tbody>
     </table>
@@ -24,9 +26,9 @@
       function getValues() {
         var fname = document.getElementById("fname").value;
         var lname = document.getElementById("lname").value;
-        console.log(fname);
-        console.log(lname);
+
         createTableRows(fname, lname);
+        clearForm();
       }
 
       function setValues() {
@@ -46,7 +48,42 @@
         tableRow.appendChild(td1);
         tableRow.appendChild(td2);
 
+        var editTd = document.createElement("td");
+        var editBtn = document.createElement("button");
+        editBtn.setAttribute("onclick", "editUser()");
+        editBtn.innerHTML = "Edit";
+        editTd.appendChild(editBtn);
+        tableRow.appendChild(editTd);
+
+        var deleteTd = document.createElement("td");
+        var deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute("onclick", "deleteUser()");
+        deleteBtn.innerHTML = "Delete";
+        deleteTd.appendChild(deleteBtn);
+        tableRow.appendChild(deleteTd);
+
         document.getElementById("myTable").appendChild(tableRow);
+      }
+
+      function editUser() {
+        console.log("Edit User function called");
+      }
+
+      function deleteUser() {
+        console.log("Delete User function called");
+      }
+
+      function clearForm() {
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+      }
+
+      function editUser() {
+        console.log("Edit User function called");
+      }
+
+      function deleteUser() {
+        console.log("Delete User function called");
       }
     </script>
   </body>
